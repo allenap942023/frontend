@@ -3,6 +3,7 @@ import Sidebar from "../components/Sidebar";
 import { FaNotesMedical } from "react-icons/fa";
 import axios from "axios";
 import { FaPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NuevoPaciente = () => {
   const URLBackEnd = "https://excited-miniskirt-wasp.cyclic.app/api";
@@ -126,38 +127,38 @@ const NuevoPaciente = () => {
                               {paciente.nombre}
                             </td>
                             <td className="py-4 px-6 lg:w-1/4 border-r-2">
-                              <a
-                                href={
+                              <Link
+                                to={
                                   "/dashboard/medical-history/" + paciente._id
                                 }
                                 className="text-blue-500 hover:text-orange-500 py-2 px-4 rounded-md focus:ring-4 focus:ring-blue-300 focus:outline-none transition duration-300 flex text-lg items-center justify-center"
                               >
                                 <FaPlus size={12} className="mr-2"></FaPlus>
                                 Historial médico
-                              </a>
+                              </Link>
                             </td>
                             <td className="py-4 px-6 lg:w-1/4">
-                              <a
-                                href={
+                            <Link
+                                to={
                                   "/dashboard/new-consultation/" + paciente._id
                                 }
                                 className="text-green-500 hover:text-orange-500 py-2 px-4 rounded-md focus:ring-4 focus:ring-blue-300 focus:outline-none transition duration-300 flex text-lg items-center justify-center"
                               >
                                 <FaPlus size={12} className="mr-2"></FaPlus>
                                 Nueva consulta
-                              </a>
+                              </Link>
                             </td>
 
                             <td className="py-4 px-6 lg:w-1/4">
-                              <a
-                                href={
+                              <Link
+                                to={
                                   "/dashboard/patient/detalle/" + paciente._id
                                 }
                                 className="text-orange-500 hover:text-orange-500 py-2 px-4 rounded-md focus:ring-4 focus:ring-blue-300 focus:outline-none transition duration-300 flex text-lg items-center justify-center"
                               >
                                 <FaPlus size={12} className="mr-2"></FaPlus>
                                 Ver Detalle
-                              </a>
+                              </Link>
                             </td>
                           </tr>
                           </>

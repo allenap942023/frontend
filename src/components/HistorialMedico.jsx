@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import { FaNotesMedical } from "react-icons/fa";
 import axios from "axios";
@@ -180,8 +180,8 @@ const HistorialMedico = () => {
                                 {item.diagnostico}
                               </td>
                               <td className="py-4 px-6 lg:w-1/6 text-center">
-                                <a
-                                  href={
+                                <Link
+                                  to={
                                     "/dashboard/consultation/" +
                                     id +
                                     "/" +
@@ -191,7 +191,7 @@ const HistorialMedico = () => {
                                 >
                                   <FaExternalLinkAlt className="mr-2"></FaExternalLinkAlt>
                                   Ver
-                                </a>
+                                </Link>
                               </td>
                             </tr>
                           </>
