@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import {
   FaUser,
   FaSearch,
@@ -26,7 +26,7 @@ const Sidebar = () => {
   const isTabletOrMobile = useMediaQuery({ maxWidth: 767 });
   const [menuOpen, setMenuOpen] = useState(!isTabletOrMobile);
   const [usuario, setUsuario] = useState(null);
-
+  const history = useNavigate();
   useEffect(() => {
     setMenuOpen(!isTabletOrMobile);
     obtenerInfoUsuario();
@@ -69,7 +69,8 @@ const Sidebar = () => {
       if (result.isConfirmed) {
         window.localStorage.removeItem("token");
         window.localStorage.removeItem("_id");
-        window.location.replace("/login");
+        // window.location.replace("/login");
+        history("/login");
       }
     });
   };

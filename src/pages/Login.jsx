@@ -1,4 +1,6 @@
 import React , { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+
 import axios from 'axios';
 
 
@@ -6,6 +8,7 @@ const Login = () => {
     const [errorMessage, setErrorMessage] = useState('');
     const URLBackEnd = 'https://excited-miniskirt-wasp.cyclic.app/api';
     const mensaje  = '';
+    const history = useNavigate();
     const IniciarSesion = (event)=>{
         event.preventDefault()
         var username = event.target.username.value;
@@ -18,14 +21,14 @@ const Login = () => {
             var {token,_id} = datosRecibidos;
             window.localStorage.setItem('token', token);
             window.localStorage.setItem('_id', _id);
-            window.location.replace("/dashboard");
-            
+            // window.location.replace("/dashboard");
+            history("/dashboard");
             // window.localStorage.getItem(key);
     
         }
      ).catch((error)=>{
     
-        setErrorMessage(error.response.data.mensaje);
+        error && error.response && setErrorMessage(error.response.data.mensaje);
         console.log(error);
      });
     }
