@@ -87,7 +87,7 @@ const HistorialMedico = () => {
                 type="date"
                 placeholder="Escriba el nombre del paciente"
                 name="fechaInicio"
-                value={moment().format("YYYY-MM-DD")}
+                // value={moment().format("YYYY-MM-DD")}
                 className="w-20 flex-1 px-2 text-xs outline-none bg-transparent"
               />
             </div>
@@ -98,7 +98,7 @@ const HistorialMedico = () => {
                 type="date"
                 placeholder="Escriba el nombre del paciente"
                 name="fechaFin"
-                value={moment().format("YYYY-MM-DD")}
+                // value={moment().format("YYYY-MM-DD")}
                 className="w-1/5 flex-1 px-2 text-xs outline-none bg-transparent"
               />
             </div>
