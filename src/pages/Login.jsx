@@ -62,7 +62,7 @@ const Login = () => {
                             type="text"
                             name="username"
                             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 text-lg"  // Ajusta el tamaño de la fuente
-                            placeholder="Ingrese su correo electrónico"
+                            placeholder="Ingrese su DUI"
                             required="1"
                         />
                         
