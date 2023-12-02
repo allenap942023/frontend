@@ -54,7 +54,7 @@ const HistorialMedico = () => {
   };
 
   return (
-    <div className="flex " style={{ backgroundImage: "url('/src/img/imagenes/Sin título.png')", backgroundSize: "cover" }}>
+    <div className="flex " style={{ backgroundImage: "url('/img/imagenes/Sin título.png')", backgroundSize: "cover" }}>
       {" "}
       {/* aqui le quite: h-screen pero pueda que lo regrese */}
       {/* Contenido del Sidebar */}

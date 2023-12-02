@@ -11,7 +11,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="flex  "style={{ backgroundImage: "url('/src/img/imagenes/fondoblanco.jpg')", backgroundSize: "cover" }}
+    <div className="flex  "style={{ backgroundImage: "url('/img/imagenes/fondoblanco.jpg')", backgroundSize: "cover" }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       {/* Contenido del Sidebar */}

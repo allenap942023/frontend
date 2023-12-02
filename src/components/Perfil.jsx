@@ -44,7 +44,7 @@ const NuevoPaciente = () => {
     <div
       className="flex flex-col md:flex-row sm:flex-col xs:flex-col overflow-scroll"
       style={{
-        backgroundImage: "url('/src/img/imagenes/Sin título.png')",
+        backgroundImage: "url('/img/imagenes/Sin título.png')",
         backgroundSize: "cover",
       }}
     >

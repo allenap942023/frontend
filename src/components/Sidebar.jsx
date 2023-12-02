@@ -90,7 +90,7 @@ const Sidebar = () => {
             <><FaPlus size={25} className={"rotate-45 m-2"} /> </>
              
           ) : (
-            <><FaBars size={40} /> <img src="/src/img/imagenes/ordino4.png" alt="ORDINO" className="w-36 h-25 object-cover object-center mr-4 hover:scale-110 transition-transform duration-300 cursor-pointer"/></>
+            <><FaBars size={40} /> <img src="/img/imagenes/ordino4.png" alt="ORDINO" className="w-36 h-25 object-cover object-center mr-4 hover:scale-110 transition-transform duration-300 cursor-pointer"/></>
           )}
         </button>
       )}

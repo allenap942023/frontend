@@ -32,10 +32,10 @@ const Login = () => {
 
     return (
         <div id="izquierda" className="flex items-center justify-center h-screen relative">
-            <div className="hidden md:w-1/2 md:flex w-1/2 h-full flex items-center justify-center" style={{ backgroundImage: "url('/src/img/imagenes/jadeazul.jpg')", backgroundSize: "cover" }}>
+            <div className="hidden md:w-1/2 md:flex w-1/2 h-full flex items-center justify-center" style={{ backgroundImage: "url('/img/imagenes/jadeazul.jpg')", backgroundSize: "cover" }}>
                 {/* Cambia el contenido del div a la imagen */}
                 <img
-                    src="/src/img/imagenes/ordino2.png"  // Reemplaza con la ruta de tu logo
+                    src="/img/imagenes/ordino2.png"  // Reemplaza con la ruta de tu logo
                     alt="Logo de ORDINO"
                     className="text-white text-4xl font-bold"  // Agrega clases o estilos según sea necesario
                     style={{ width: "250px", height: "auto" }}  // Ajusta el tamaño de la imagen según tus preferencias

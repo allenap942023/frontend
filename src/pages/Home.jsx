@@ -10,7 +10,7 @@ const Home = ({ showNavbar }) => {
       <div
         id="div1"
         className="py-16 bg-cover bg-center h-screen relative"
-        style={{ backgroundImage: "url('/src/img/imagenes/DoctoraP.png')" }}
+        style={{ backgroundImage: "url('/img/imagenes/DoctoraP.png')" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         <div className="absolute flex flex-col justify-center items-center top-1/3 text-white text-center md:w-96 md:left-auto md:right-16 md:transform-none">
@@ -36,7 +36,7 @@ const Home = ({ showNavbar }) => {
       <div
         id="div2"
         className="py-16 bg-cover bg-center h-screen relative"
-        style={{ backgroundImage: "url('/src/img/imagenes/div2.jpeg')" }}
+        style={{ backgroundImage: "url('/img/imagenes/div2.jpeg')" }}
       >
         <div className="absolute flex flex-col justify-center items-center top-1/3 text-white text-center md:w-96 md:left-auto md:right-16 md:transform-none">
           <p className="text-3xl md:text-2xl lg:text-3xl xl:text-3xl">
@@ -86,14 +86,14 @@ const Home = ({ showNavbar }) => {
     <div className="flex justify-end w-2/3">
       <div className="card-hover w-1/2 mr-4 mb-8 rounded-[88px] shadow-lg" style={{ width: "273px", height: "349px" }}>
         <img
-          src="/src/img/imagenes/Inter (2).png"
+          src="/img/imagenes/Inter (2).png"
           alt="Tarjeta 1"
           className="rounded-[40px]  w-full h-full object-cover rounded-lg transition-transform duration-300 transform "
         />
       </div>
       <div className="card-hover w-1/2 ml-4 mb-8 rounded-[88px] shadow-lg" style={{ width: "317px", height: "349px" }}>
         <img
-          src="/src/img/imagenes/Inter (1).png"
+          src="/img/imagenes/Inter (1).png"
           alt="Tarjeta 2"
           className="rounded-[40px] w-full h-full object-cover rounded-lg transition-transform duration-300 transform  "
         />

@@ -42,7 +42,7 @@ const NuevoPaciente = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row sm:flex-col "style={{ backgroundImage: "url('/src/img/imagenes/Sin título.png')", backgroundSize: "cover" }}
+    <div className="flex flex-col md:flex-row sm:flex-col "style={{ backgroundImage: "url('/img/imagenes/Sin título.png')", backgroundSize: "cover" }}
     
     > 
     

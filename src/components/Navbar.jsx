@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center py-4 relative">
         <div className="logo flex items-center h-14">
           <img
-            src="/src/img/imagenes/ordino2.png"
+            src="/img/imagenes/ordino2.png"
             alt="ORDINO"
             className={`w-36 h-25 object-cover object-center ${isMobile ? 'mr-4' : ''} hover:scale-110 transition-transform duration-300 cursor-pointer`}
             onClick={() => scrollToSection('div1')}

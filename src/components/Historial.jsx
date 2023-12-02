@@ -15,7 +15,7 @@ const Historial = () => {
   ];
 
   return (
-    <div className="flex h-screen "style={{ backgroundImage: "url('/src/img/imagenes/dashboard4.jpg')", backgroundSize: "cover" }}> {/* aqui le quite: h-screen pero pueda que lo regrese */}
+    <div className="flex h-screen "style={{ backgroundImage: "url('/img/imagenes/dashboard4.jpg')", backgroundSize: "cover" }}> {/* aqui le quite: h-screen pero pueda que lo regrese */}
       <Sidebar onOptionClick={handleOptionClick} />
       {/* Contenido principal del Dashboard */}
       <section id="Principal" className="flex-1 flex flex-col overflow-hidden items-start bg-white bg-opacity-70 text-black shadow-2xl rounded-lg md:ml-72 md:mr-4 md:mt-8">

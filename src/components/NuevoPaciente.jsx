@@ -79,7 +79,7 @@ const NuevoPaciente = () => {
 
   return (
 
-    <div className="flex flex-col sm:flex-row h-full " style={{ backgroundImage: "url('/src/img/imagenes/Sin título.png')", backgroundSize: "cover" }}
+    <div className="flex flex-col sm:flex-row h-full " style={{ backgroundImage: "url('/img/imagenes/Sin título.png')", backgroundSize: "cover" }}
     >
 
       <Sidebar onOptionClick={handleOptionClick} />

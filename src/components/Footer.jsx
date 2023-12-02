@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="flex flex-col items-center space-y-4">
         {/* Agrega tu imagen de logo */}
         <img
-          src="/src/img/imagenes/ordino2.png" // Reemplaza con la ruta de tu logo
+          src="/img/imagenes/ordino2.png" // Reemplaza con la ruta de tu logo
           alt="Logo de Ordino"
           className="w-36 h-auto  transition-transform duration-300"  // Agrega el efecto de escala en hover
         />
