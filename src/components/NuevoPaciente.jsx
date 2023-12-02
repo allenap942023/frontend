@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import ProfilePictureUploader from "../components/ProfilePictureUploader"; // Ajusta la ruta según la ubicación del componente
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const NuevoPaciente = () => {
   const URLBackEnd = "https://excited-miniskirt-wasp.cyclic.app/api";
   const [selectedOption, setSelectedOption] = useState(null);
-
+  const history = useNavigate();
   // Función para manejar el clic en las opciones del sidebar
   const handleOptionClick = (option) => {
     setSelectedOption(option);
@@ -68,7 +69,7 @@ const NuevoPaciente = () => {
         var datosRecibidos = res.data;
         console.log(datosRecibidos);
         // window.location.replace("/dashboard");
-
+        history("/dashboard/search");
         // window.localStorage.getItem(key);
       })
       .catch((error) => {

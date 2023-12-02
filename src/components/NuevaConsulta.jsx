@@ -1,13 +1,14 @@
 import { useState,useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import DatosPaciente from "./DatosPaciente";
-import { useParams } from "react-router-dom";
+import { useParams ,useNavigate} from "react-router-dom";
 import axios from "axios";
 import moment from "moment";
 import { FaChevronRight } from "react-icons/fa";
 const NuevaConsulta = () => {
   var id = null, idConsulta = null;
   var parametros = useParams();
+  const history = useNavigate();
   const URLBackEnd = "https://excited-miniskirt-wasp.cyclic.app/api";
   const inputNames = [
     "Fecha Cita",
@@ -62,7 +63,7 @@ const NuevaConsulta = () => {
         var datosRecibidos = res.data;
         console.log(datosRecibidos);
         // window.location.replace("/dashboard");
-
+        history("/dashboard/medical-history/"+id);
         // window.localStorage.getItem(key);
       })
       .catch((error) => {
