@@ -120,8 +120,9 @@ const NuevaConsulta = () => {
   return (
     <div
       className="flex w-full"
+      style={{ backgroundImage: "url('/public/img/imagenes/fondoblanco.jpg')" }}
       // style={{
-      //   backgroundImage: "url('/img/imagenes/fondoblanco.jpg')",
+      //   backgroundImage: "url('/public/imagenes/fondoblanco.jpg')",
       //   backgroundSize: "cover",
       // }}
     >

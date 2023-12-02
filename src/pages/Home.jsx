@@ -16,7 +16,7 @@ const Home = ({ showNavbar }) => {
       <div
         id="div1"
         className="py-16 bg-cover bg-center h-screen relative "
-        style={{ backgroundImage: "url('/src/img/imagenes/DoctoraP.png')" }}
+        style={{ backgroundImage: "url('/public/img/imagenes/DoctoraP.png')" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         <div className="absolute flex flex-col justify-center items-center top-1/3 text-white text-center md:w-96 md:left-auto md:right-16 md:transform-none">
@@ -42,7 +42,7 @@ const Home = ({ showNavbar }) => {
       <div
         id="div2"
         className="py-16 bg-cover bg-center h-screen relative"
-        style={{ backgroundImage: "url('/src/img/imagenes/div2.jpeg')" }}
+        style={{ backgroundImage: "url('/public/img/imagenes/div2.jpeg')" }}
       >
         <div className="absolute flex flex-col justify-center items-center top-1/3 text-white text-center md:w-96 md:left-auto md:right-16 md:transform-none">
           <p className="text-3xl md:text-2xl lg:text-3xl xl:text-3xl animate-pulse">
@@ -94,14 +94,14 @@ const Home = ({ showNavbar }) => {
           <div className="flex justify-end w-2/3">
             <div className="card-hover w-1/2 mr-4 mb-8 rounded-[88px] shadow-lg" style={{ width: "273px", height: "349px" }}>
               <img
-                src="/src/img/imagenes/Inter (2).png"
+                src="/public/img/imagenes/Inter (2).png"
                 alt="Tarjeta 1"
                 className="rounded-[40px]  w-full h-full object-cover rounded-lg transition-transform duration-300 transform hover:scale-105"
               />
             </div>
             <div className="card-hover w-1/2 ml-4 mb-8 rounded-[88px] shadow-lg" style={{ width: "317px", height: "349px" }}>
               <img
-                src="/src/img/imagenes/Inter (1).png"
+                src="/public/img/imagenes/Inter (1).png"
                 alt="Tarjeta 2"
                 className="rounded-[40px] w-full h-full object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 "
               />
@@ -113,7 +113,7 @@ const Home = ({ showNavbar }) => {
 
 
 
-      <div id="div4" className="py-16 h-screen" style={{ backgroundImage: "url('/src/img/imagenes/dashboard5.jpg')", backgroundSize: "cover" }}>
+      <div id="div4" className="py-16 h-screen" style={{ backgroundImage: "url('/public/img/imagenes/dashboard5.jpg')", backgroundSize: "cover" }}>
         
         <div class="flex items-center justify-center  h-full">
           <section class="max-w-5xl p-8 rounded-lg shadow-lg bg-gray-700 bg-opacity-70 transform hover:scale-105 transition duration-300 hover:rotate-3 hover:-translate-y-1 hover:shadow-2xl">
@@ -124,7 +124,7 @@ const Home = ({ showNavbar }) => {
       </div>
 
 
-      <div id="div5" className="h-screen grid grid cols-1 items-center justify-center" style={{ backgroundImage: "url('/src/img/imagenes/jadeazul.jpg')", backgroundSize: "cover" }}>
+      <div id="div5" className="h-screen grid grid cols-1 items-center justify-center" style={{ backgroundImage: "url('/public/img/imagenes/jadeazul.jpg')", backgroundSize: "cover" }}>
       <div className="bg-gray-900 bg-opacity-80 text-white flex items-center justify-center h-1/2 rounded-lg ">
       <div className="text-center">
         <h1 className="text-5xl font-extrabold mb-4 animate-bounce">Contacta con nosotros</h1>
