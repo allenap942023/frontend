@@ -46,17 +46,17 @@ const Navbar = () => {
                     </button>
                   </li>
                   <li>
-                    <button className="text-white" onClick={() => scrollToSection('div2')}>
+                    <button className="text-white" onClick={() => scrollToSection('div3')}>
                       Conócenos
                     </button>
                   </li>
                   <li>
-                    <button className="text-white" onClick={() => scrollToSection('div3')}>
+                    <button className="text-white" onClick={() => scrollToSection('div4')}>
                       ¿Por qué Elegirnos?
                     </button>
                   </li>
                   <li>
-                    <button className="text-white" onClick={() => scrollToSection('div4')}>
+                    <button className="text-white" onClick={() => scrollToSection('div5')}>
                       Contacto
                     </button>
                   </li>
@@ -89,7 +89,7 @@ const Navbar = () => {
       </button>
     </li>
     <li>
-      <button className="text-white hover:text-red-500 transition-all duration-300" onClick={() => scrollToSection('div4')}>
+      <button className="text-white hover:text-red-500 transition-all duration-300" onClick={() => scrollToSection('div5')}>
         Contacto
       </button>
     </li>
