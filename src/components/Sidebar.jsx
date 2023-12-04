@@ -25,7 +25,7 @@ const URLBackEnd = "https://excited-miniskirt-wasp.cyclic.app/api";
 const Sidebar = () => {
   const isTabletOrMobile = useMediaQuery({ maxWidth: 767 });
   const [menuOpen, setMenuOpen] = useState(!isTabletOrMobile);
-  const [usuario, setUsuario] = useState(null);
+  const [usuario, setUsuario] = useState({});
   const rol = window.localStorage.getItem("rol");
   const history = useNavigate();
   useEffect(() => {
@@ -105,9 +105,9 @@ const Sidebar = () => {
                 alt="Foto del doctor"
                 className="w-20 h-20 sm:w-45 s:h-45 rounded-full mb-2 "
               />
-              <h3 className="text-xl font-bold">{}</h3>
-              <p className="text-md">{usuario && usuario.especialidad}</p>
-              <p className="text-md">{usuario && usuario.clinica}</p>
+              <h3 className="text-xl font-bold">{usuario.username}</h3>
+              <p className="text-md">{usuario.especialidad}</p>
+              <p className="text-md">{usuario.clinica}</p>
             </div>
             <div className="">
               <ul className="flex flex-col space-y-2">
