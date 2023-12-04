@@ -18,7 +18,7 @@ const Login = () => {
         (res)=>{
             var datosRecibidos  = res.data;
             console.log(datosRecibidos);
-            var {token,_id} = datosRecibidos;
+            var {token,_id,rol} = datosRecibidos;
             window.localStorage.setItem('token', token);
             window.localStorage.setItem('_id', _id);
             window.localStorage.setItem('rol', rol);

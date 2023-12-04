@@ -138,6 +138,7 @@ const NuevoPaciente = () => {
                               </Link>
                             </td>
                             <td className="py-4 px-6 lg:w-1/4">
+                            {rol == 'enfermero'?
                             <Link
                                 to={
                                   "/dashboard/new-consultation/" + paciente._id
@@ -147,6 +148,7 @@ const NuevoPaciente = () => {
                                 <FaPlus size={12} className="mr-2"></FaPlus>
                                 Nueva consulta
                               </Link>
+                              :<></>}
                             </td>
 
                             <td className="py-4 px-6 lg:w-1/4">
