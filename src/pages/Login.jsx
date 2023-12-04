@@ -21,6 +21,7 @@ const Login = () => {
             var {token,_id} = datosRecibidos;
             window.localStorage.setItem('token', token);
             window.localStorage.setItem('_id', _id);
+            window.localStorage.setItem('rol', rol);
             // window.location.replace("/dashboard");
             history("/dashboard");
             // window.localStorage.getItem(key);
