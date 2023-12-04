@@ -112,7 +112,7 @@ const Sidebar = () => {
             <div className="">
               <ul className="flex flex-col space-y-2">
                 <li className="transition-transform transform-gpu ">
-                {rol == 'enfermero'?
+                {rol != 'enfermero'?
                   <Link
                     to="/dashboard/new-patient"
                     className="flex items-center space-x-5 lg:p-5 md:p-3 bg-white hover:bg-gray-800 hover:text-white rounded-lg transition duration-300"
@@ -122,8 +122,8 @@ const Sidebar = () => {
                       className="transition-colors duration-300 hover:text-yellow-300"
                     />
                     <span className="text-lg">Nuevo Paciente</span>
-                  </Link>
-                </li>:<></>}
+                  </Link>:<></>}
+                </li>
                 <li className="transition-transform transform-gpu ">
                   <Link
                     to="/dashboard/search"

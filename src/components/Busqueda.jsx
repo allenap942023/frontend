@@ -9,7 +9,7 @@ const NuevoPaciente = () => {
   const URLBackEnd = "https://excited-miniskirt-wasp.cyclic.app/api";
   const [selectedOption, setSelectedOption] = useState(null);
   const [listaPacientes, setListaPacientes] = useState([]);
-
+  const rol = window.localStorage.getItem("rol");
   // Función para manejar el clic en las opciones del sidebar
   const handleOptionClick = (option) => {
     setSelectedOption(option);
@@ -138,7 +138,7 @@ const NuevoPaciente = () => {
                               </Link>
                             </td>
                             <td className="py-4 px-6 lg:w-1/4">
-                            {rol == 'enfermero'?
+                            {rol != 'enfermero'?
                             <Link
                                 to={
                                   "/dashboard/new-consultation/" + paciente._id
