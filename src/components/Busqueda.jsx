@@ -110,9 +110,10 @@ const NuevoPaciente = () => {
                         <th className="py-3 px-6 lg:w-1/4 text-center border-r-slate-700">
                           
                         </th>
+                        {rol != 'enfermero'?
                         <th className="py-3 px-6 lg:w-1/4 text-center">
                           
-                        </th>
+                        </th>:<></>}
                         <th className="py-3 px-6 lg:w-1/4 text-center">
                           
                           </th>
@@ -137,8 +138,9 @@ const NuevoPaciente = () => {
                                 Historial médico
                               </Link>
                             </td>
-                            <td className="py-4 px-6 lg:w-1/4">
                             {rol != 'enfermero'?
+                            <td className="py-4 px-6 lg:w-1/4">
+                           
                             <Link
                                 to={
                                   "/dashboard/new-consultation/" + paciente._id
@@ -148,8 +150,9 @@ const NuevoPaciente = () => {
                                 <FaPlus size={12} className="mr-2"></FaPlus>
                                 Nueva consulta
                               </Link>
-                              :<></>}
+                              
                             </td>
+                            :<></>}
 
                             <td className="py-4 px-6 lg:w-1/4">
                               <Link
