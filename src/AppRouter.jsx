@@ -12,6 +12,8 @@ import HistorialMedico from './components/HistorialMedico'; // Importa el compon
 import Historial from './components/Historial'; // Importa el componente correspondiente
 import Perfil from './components/Perfil'; // Importa el componente correspondiente
 import Detalles from './components/Detalles'; 
+import Usuarios from './components/Usuarios';
+import EditarUsuarios from './components/EditarUsuarios';
 
 export const AppRouter = () => {
   return (
@@ -28,6 +30,8 @@ export const AppRouter = () => {
           <Route path="/dashboard/medical-history/:id" element={<HistorialMedico />} />
           <Route path="/dashboard/history" element={<Historial />} />
           <Route path="/dashboard/profile" element={<Perfil />} />
+          <Route path="/dashboard/usuarios" element={<Usuarios />} />
+          <Route path="/dashboard/usuarios/:id" element={<EditarUsuarios />} />
           <Route path="/dashboard/patient/detalle/:id" element={<Detalles />} />
       </Routes>
       <Footer /> 

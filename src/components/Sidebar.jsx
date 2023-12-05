@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link , useNavigate} from "react-router-dom";
+import { Link , useNavigate,useLocation} from "react-router-dom";
 import {
   FaUser,
   FaSearch,
@@ -28,6 +28,7 @@ const Sidebar = () => {
   const [usuario, setUsuario] = useState({});
   const rol = window.localStorage.getItem("rol");
   const history = useNavigate();
+  const location = useLocation();
   useEffect(() => {
     setMenuOpen(!isTabletOrMobile);
     obtenerInfoUsuario();
@@ -39,6 +40,7 @@ const Sidebar = () => {
 
   const obtenerInfoUsuario = () => {
     var id = window.localStorage.getItem("_id");
+    var rol = window.localStorage.getItem("rol");
     var token = window.localStorage.getItem("token");
 
     axios
@@ -54,7 +56,30 @@ const Sidebar = () => {
       })
       .catch((error) => {
         console.log(error);
+        if(error.response){
+          if (error && error.response.status === 401) {
+            window.localStorage.removeItem("token");
+            window.localStorage.removeItem("_id");
+            // window.location.replace("/login");
+            history("/login");
+          
+          }
+        }
+
       });
+
+      if(rol == 'administrador' && !(location.pathname== '/dashboard' || location.pathname== '/dashboard/usuarios')){
+        history("/dashboard");
+      }
+
+      if(rol == 'medico' && (location.pathname== '/dashboard/usuarios')){
+        history("/dashboard");
+      }
+
+      if(rol == 'enfermero' && (location.pathname== '/dashboard/usuarios' ||  location.pathname== '/dashboard/new-patient' || location.pathname.includes('/dashboard/new-consultation'))){
+        history("/dashboard");
+      }
+      console.log(location.pathname)
   };
 
   const cerrarSesion = () => {
@@ -105,14 +130,29 @@ const Sidebar = () => {
                 alt="Foto del doctor"
                 className="w-20 h-20 sm:w-45 s:h-45 rounded-full mb-2 "
               />
-              <h3 className="text-xl font-bold">{usuario.username}</h3>
-              <p className="text-md">{usuario.especialidad}</p>
-              <p className="text-md">{usuario.clinica}</p>
+              <h3 className="text-xl font-bold text-center">{usuario.nombre}</h3>
+              <p className="text-md text-center">{usuario.especialidad}</p>
+              <p className="text-md text-center">{usuario.clinica}</p>
             </div>
             <div className="">
               <ul className="flex flex-col space-y-2">
+                
+                {rol == 'administrador'?
                 <li className="transition-transform transform-gpu ">
+                  <Link
+                    to="/dashboard/usuarios"
+                    className="flex items-center space-x-5 lg:p-5 md:p-3 bg-white hover:bg-gray-800 hover:text-white rounded-lg transition duration-300"
+                  >
+                    <FaUser
+                      size={24}
+                      className="transition-colors duration-300 hover:text-yellow-300"
+                    />
+                    <span className="text-lg">Usuarios</span>
+                  </Link>
+                  </li>
+                  :<>
                 {rol != 'enfermero'?
+                 <li className="transition-transform transform-gpu ">
                   <Link
                     to="/dashboard/new-patient"
                     className="flex items-center space-x-5 lg:p-5 md:p-3 bg-white hover:bg-gray-800 hover:text-white rounded-lg transition duration-300"
@@ -122,8 +162,10 @@ const Sidebar = () => {
                       className="transition-colors duration-300 hover:text-yellow-300"
                     />
                     <span className="text-lg">Nuevo Paciente</span>
-                  </Link>:<></>}
-                </li>
+                  </Link>
+                  </li>
+                  :<></>}
+               
                 <li className="transition-transform transform-gpu ">
                   <Link
                     to="/dashboard/search"
@@ -149,6 +191,8 @@ const Sidebar = () => {
                     <span className="text-lg">Perfil</span>
                   </Link>
                 </li>
+                
+                </>}
                 <li className="transition-transform transform-gpu ">
                   <a
                     onClick={cerrarSesion}

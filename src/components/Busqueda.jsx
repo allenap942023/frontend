@@ -6,6 +6,7 @@ import { FaPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const NuevoPaciente = () => {
+  
   const URLBackEnd = "https://excited-miniskirt-wasp.cyclic.app/api";
   const [selectedOption, setSelectedOption] = useState(null);
   const [listaPacientes, setListaPacientes] = useState([]);
