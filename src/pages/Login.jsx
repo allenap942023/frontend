@@ -92,12 +92,7 @@ const Login = () => {
                 <p className="mt-4 text-lg text-gray-600">
                 {errorMessage && <div className="text-red-600">{errorMessage}</div>}
                 </p>
-                <p className="mt-4 text-lg text-gray-600">
-                    ¿No tienes una cuenta?{' '}
-                    <a href="#" className="text-blue-600 hover:underline">
-                        Contacta con nosotros
-                    </a>
-                </p>
+
             </div>
 
         </div>
