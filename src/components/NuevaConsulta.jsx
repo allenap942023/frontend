@@ -3,6 +3,7 @@ import Sidebar from "../components/Sidebar";
 import DatosPaciente from "./DatosPaciente";
 import { useParams ,useNavigate} from "react-router-dom";
 import axios from "axios";
+import Swal from "sweetalert2";
 import moment from "moment";
 import { FaChevronRight } from "react-icons/fa";
 const NuevaConsulta = () => {
@@ -69,6 +70,29 @@ const NuevaConsulta = () => {
       .catch((error) => {
         // setErrorMessage(error.response.data.mensaje);
         console.log(error);
+
+        var errores = "";
+        if(error.response){
+
+          
+          if (error && error.response && error.response.data.error && error.response.data.error.errors) { // validation errors
+            // error.response.data.error.errors.map((key, val) =>{
+            //   errores+=val.message="\n";
+            // });
+            for (let field in error.response.data.error.errors) {
+              console.log(error.response.data.error.errors[field].message)
+              errores+=error.response.data.error.errors[field].message+"";
+            }
+        }
+        Swal.fire(
+          'Error!',
+          'No se pudo guardar el paciente debido al siguiente error:'+error.response.data.mensaje+"    ,"+errores,
+          'error'
+      );
+    }
+        // setErrorMessage(error.response.data.mensaje);
+        console.log(error.response.data.error.errors);
+        
       });
   };
 
