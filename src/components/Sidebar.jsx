@@ -68,7 +68,7 @@ const Sidebar = () => {
 
       });
 
-      if(rol == 'administrador' && !(location.pathname== '/dashboard' || location.pathname== '/dashboard/usuarios')){
+      if(rol == 'administrador' && !(location.pathname== '/dashboard' || location.pathname.includes( '/dashboard/usuarios'))){
         history("/dashboard");
       }
 
