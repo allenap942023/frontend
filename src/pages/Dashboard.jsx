@@ -23,7 +23,7 @@ const Dashboard = () => {
   <div class="max-w-4xl mx-auto px-6 py-12">
     <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-bounce">Bienvenido/a a tu clinica</h1>
     <p class="text-lg md:text-xl text-white mb-12 animate-pulse">Nos apaciona ver como te conviertes en un lider digital de la gestion médica.</p>
-    <a href="/src/components/Busqueda.jsx" class="inline-block bg-white text-blue-500 hover:bg-blue-600 text-lg md:text-xl font-medium py-3 px-6 rounded-lg transition duration-300 ease-in-out animate-pulse">Buscar Pacientes</a>
+    <a href="#" class="inline-block bg-white text-blue-500 hover:bg-blue-600 text-lg md:text-xl font-medium py-3 px-6 rounded-lg transition duration-300 ease-in-out animate-pulse">Buscar Pacientes</a>
   </div>
 </div>
       </div>
